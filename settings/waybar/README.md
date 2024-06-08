@@ -1,0 +1,1 @@
+Shamelessly adapted from [JaKooLit's Hyprland config](https://github.com/JaKooLit/Hyprland-Dots/tree/main/config/waybar), give them a :star:!
