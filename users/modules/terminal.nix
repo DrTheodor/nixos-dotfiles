@@ -15,9 +15,9 @@ with lib;
       ls = "eza";
       l = "eza -l";
       la = "eza -la";
-      rebuild = "sudo nixos-rebuild switch";
+      rebuild = "nh os switch /etc/nixos";
       nixos-clean = "sudo nix-collect-garbage -d";
-      nixos-update = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .";
+      nixos-update = "cd /etc/nixos && sudo nix flake update && rebuild";
       just-rider = "NIXPKGS_ALLOW_UNFREE=1 nix shell nixpkgs#jetbrains.rider --impure && nohup rider >/dev/null 2>&1 &";
     };
 

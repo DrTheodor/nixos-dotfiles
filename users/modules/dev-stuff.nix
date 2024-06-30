@@ -8,14 +8,25 @@ with lib;
   ];
 
   home.packages = with pkgs; [
-    gh
+    # java
     visualvm
     zulu17
-    git
 
+    # rust
+    rustc
+    cargo
+
+    # code editors
+    neovim
+    neovide
     vscodium
     jetbrains.idea-community
     jetbrains.rust-rover
+    godot_4
+
+    gh
+    gitbutler
+    git
   ];
 
   programs.direnv = {

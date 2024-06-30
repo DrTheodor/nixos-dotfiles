@@ -25,7 +25,18 @@ with lib;
     qbittorrent
     alsa-oss
     reaper
+    vivaldi-ffmpeg-codecs
   ];
 
+  programs.vivaldi = {
+    enable = true;
+    package = pkgs.vivaldi.override {
+      proprietaryCodecs = true;
+      enableWidevine = true;
+    };
+    commandLineArgs = [];
+    extensions = [];
+  };
+  
   home.stateVersion = "23.11";
 }

@@ -11,5 +11,5 @@
     options = "grp:ctrl_shift_toggle";
   };
 
-  nvidia = false;
+  nvidia = true;
 }

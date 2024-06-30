@@ -11,9 +11,6 @@
 
       ./modules/general.nix
       ./modules/hyprland
-
-      # Comment this if you don't use a Nvidia GPU
-      ./nvidia.nix
     ];
 
   home-manager.useGlobalPkgs = true;
@@ -45,7 +42,6 @@
 
   hardware.opengl = {
     enable = true;
-    driSupport = true;
     driSupport32Bit = true;
   };
 
@@ -74,6 +70,11 @@
   systemd.user.extraConfig = ''
     DefaultEnvironment="PATH=/run/current-system/sw/bin"
   '';
+
+  programs.nh = {
+    enable = true;
+    flake = "/etc/nixos";
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

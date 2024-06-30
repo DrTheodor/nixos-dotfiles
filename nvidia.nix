@@ -22,7 +22,7 @@ with lib;
     GBM_BACKEND = "nvidia-drm";
     XDG_SESSION_TYPE = "wayland";
     LIBVA_DRIVER_NAME = "nvidia";
-    NIXOS_OZONE_WL = "1";
+    #NIXOS_OZONE_WL = "1";
   };
   
   hardware.nvidia = {
@@ -39,13 +39,24 @@ with lib;
     nvidiaSettings = true;
     
     # Driver package. Using an outdated driver which doesn't cause problems with games.
-    package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+    /*package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
       version = "535.113.01";
       sha256_64bit = "sha256-KOME2N/oG39en2BAS/OMYvyjVXjZdSLjxwoOjyMWdIE=";
       sha256_aarch64 = "sha256-k7k22z5PYZdBVfuYXVcl9SFUMqZmK4qyxoRwlYyRdgU=";
       openSha256 = "sha256-dktHCoESqoNfu5M73aY5MQGROlZawZwzBqs3RkOyfoQ=";
-      settingsSha256 = "sha256-qNjfsT9NGV151EHnG4fgBonVFSKc4yFEVomtXg9uYD4=";
+      settingsSha256 = "sha256-hiX5Nc4JhiYYt0jaRgQzfnmlEQikQjuO0kHnqGdDa04=";
       persistencedSha256 = "sha256-ci86XGlno6DbHw6rkVSzBpopaapfJvk0+lHcR4LDq50=";
+
+      ibtSupport = true;
+    };*/
+    #package = config.boot.kernelPackages.nvidiaPackages.latest; # not yet in unstable
+    package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+      version = "555.58";
+      sha256_64bit = "sha256-bXvcXkg2kQZuCNKRZM5QoTaTjF4l2TtrsKUvyicj5ew=";
+      sha256_aarch64 = "sha256-7XswQwW1iFP4ji5mbRQ6PVEhD4SGWpjUJe1o8zoXYRE=";
+      openSha256 = "sha256-hEAmFISMuXm8tbsrB+WiUcEFuSGRNZ37aKWvf0WJ2/c=";
+      settingsSha256 = "sha256-vWnrXlBCb3K5uVkDFmJDVq51wrCoqgPF03lSjZOuU8M=";
+      persistencedSha256 = "sha256-lyYxDuGDTMdGxX3CaiWUh1IQuQlkI2hPEs5LI20vEVw=";
 
       ibtSupport = true;
     };

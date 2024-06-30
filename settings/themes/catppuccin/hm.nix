@@ -3,13 +3,10 @@
 with lib;
 
 {
-  home.packages = with pkgs; [
-    ((callPackage ./package.nix {}).override {
-      accent = "teal";
-      variant = "mocha";
-      themeList = [ "grub" "sddm" ];
-    })
-  ];
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+  };
 
   programs.oh-my-posh.useTheme = "catppuccin";
 
@@ -92,21 +89,6 @@ with lib;
 
   gtk = {
     enable = true;
-    theme = {
-      name = "Catppuccin-Mocha-Standard-Mauve-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "mauve" ];
-        size = "standard";
-        tweaks = [ "normal" ];
-        variant = "mocha";
-      };
-    };
-    iconTheme = {
-      name = "Papirus";
-      package = pkgs.catppuccin-papirus-folders.override {
-        accent = "mauve";
-        flavor = "mocha";
-      };
-    };
+    catppuccin.enable = true;
   };
 }
