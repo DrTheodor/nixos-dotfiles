@@ -128,6 +128,7 @@
     "smooth-scrolling-threshold" = 1;
     "player-icons" = {
       "chromium" = "";
+      "vivaldi" = "";
       "default" = "";
       "firefox" = "";
       "kdeconnect" = "";

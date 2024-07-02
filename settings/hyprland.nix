@@ -1,6 +1,6 @@
 {
   bind = [
-    "$mod, F, exec, firefox"
+    "$mod, F, exec, vivaldi"
     "$mod, Q, exec, kitty"
     ", Print, exec, grimblast copy area"
     "$mod, C, killactive"
@@ -44,5 +44,17 @@
   bindle = [
     ", XF86AudioLowerVolume, exec, pamixer -d 1"
     ", XF86AudioRaiseVolume, exec, pamixer -i 1"
+  ];
+
+  bindm = [
+    "$mod, mouse:272, movewindow"
+    "$mod, mouse:273, resizewindow"
+  ];
+
+  binde = [
+    "$mod ALT, up, resizeactive, 0 -20"
+    "$mod ALT, down, resizeactive, 0 20"
+    "$mod ALT, left, resizeactive, -20 0"
+    "$mod ALT, right, resizeactive, 20 0"
   ];
 }

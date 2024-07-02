@@ -9,11 +9,10 @@ with lib;
   ];
 
   home.packages = with pkgs; [
-    firefox
     vesktop
     htop
     spotify
-    (callPackage ./../pkgs/space-station-14-launcher {})
+    space-station-14-launcher
     steam
     gnome.gnome-disk-utility
     kdenlive
