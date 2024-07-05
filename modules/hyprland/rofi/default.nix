@@ -11,6 +11,6 @@ with lib;
     enable = true;
     plugins = [ pkgs.rofimoji ];
 
-    extraConfig = import ./../../../settings/rofi.nix;
+    extraConfig = import ./../../../settings/rofi/settings.nix;
   };
 }

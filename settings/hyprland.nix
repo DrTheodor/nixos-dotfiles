@@ -16,6 +16,7 @@
     "$mod SHIFT, down, movewindow, d"
     "$mod SHIFT, left, movewindow, l"
     "$mod SHIFT, right, movewindow, r"
+    "$mod SHIFT, A, exec, rofi -show 2fa"
   ]
   ++ (
     builtins.concatLists(builtins.genList(
@@ -57,4 +58,8 @@
     "$mod ALT, left, resizeactive, -20 0"
     "$mod ALT, right, resizeactive, 20 0"
   ];
+
+  input = {
+    sensitivity = 0.5;
+  };
 }

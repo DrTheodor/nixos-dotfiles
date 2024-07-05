@@ -25,6 +25,7 @@ with lib;
     alsa-oss
     reaper
     vivaldi-ffmpeg-codecs
+    oath-toolkit
   ];
 
   programs.vivaldi = {

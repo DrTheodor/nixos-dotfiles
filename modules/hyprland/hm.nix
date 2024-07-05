@@ -32,5 +32,7 @@ in
     swww # Wallpapers!
     grim
     grimblast
+    libnotify
+    wl-clipboard
   ];
 }
