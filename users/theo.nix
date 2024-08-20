@@ -26,6 +26,7 @@ with lib;
     reaper
     vivaldi-ffmpeg-codecs
     oath-toolkit
+    (callPackage ./pkgs/spoof-dpi {}) 
   ];
 
   programs.vivaldi = {
