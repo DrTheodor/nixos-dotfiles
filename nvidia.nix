@@ -22,6 +22,7 @@ with lib;
     GBM_BACKEND = "nvidia-drm";
     XDG_SESSION_TYPE = "wayland";
     LIBVA_DRIVER_NAME = "nvidia";
+    NVD_BACKEND = "direct";
     #NIXOS_OZONE_WL = "1";
   };
   
@@ -49,8 +50,8 @@ with lib;
 
       ibtSupport = true;
     };*/
-    #package = config.boot.kernelPackages.nvidiaPackages.latest; # not yet in unstable
-    package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    /*package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
       version = "555.58";
       sha256_64bit = "sha256-bXvcXkg2kQZuCNKRZM5QoTaTjF4l2TtrsKUvyicj5ew=";
       sha256_aarch64 = "sha256-7XswQwW1iFP4ji5mbRQ6PVEhD4SGWpjUJe1o8zoXYRE=";
@@ -59,6 +60,6 @@ with lib;
       persistencedSha256 = "sha256-lyYxDuGDTMdGxX3CaiWUh1IQuQlkI2hPEs5LI20vEVw=";
 
       ibtSupport = true;
-    };
+    };*/
   };
 }

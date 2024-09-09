@@ -52,9 +52,6 @@
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
-  # Configure sound
-  sound.enable = true;
-
   services.pipewire = {
     enable = true;
     pulse.enable = true;

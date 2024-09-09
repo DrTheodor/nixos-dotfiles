@@ -22,6 +22,7 @@ in
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.swaynotificationcenter}/bin/swaync --style $HOME/.config/swaync/style.css"
         "${pkgs.swww}/bin/swww init"
+        "${pkgs.callPackage ./../../pkgs/spoof-dpi {}}/bin/spoof-dpi --port 8888 --enable-doh --window-size 0 --timeout 10000"
       ];
 
       "$mod" = "SUPER";
